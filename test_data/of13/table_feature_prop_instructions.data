@@ -23,3 +23,9 @@ of_table_feature_prop_instructions_instruction_ids_set(obj, inst_list);
 
 of_wire_buffer_grow(obj->wbuf, OF_MATCH_BYTES(obj->length));
 -- java
+    builder.setInstructionIds(
+        ImmutableList.<OFInstructionId>of(
+                factory.instructionIds().applyActions(),
+                factory.instructionIds().clearActions()
+        )
+    );
